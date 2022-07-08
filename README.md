@@ -1,1 +1,1 @@
-# employees
+employees database for import to MySQL server on MacOS
