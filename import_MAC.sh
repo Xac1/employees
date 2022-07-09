@@ -1,4 +1,5 @@
 
+#MacOS
 file=emp.tar.gz
 file_unzipped=emp.sql
 
@@ -21,7 +22,7 @@ else
 exit 1
 fi
 
-#MacOS
+
 #cd ~/Downloads/
 #git clone https://github.com/Xac1/employees 
 #sudo tar zxfv emp.tar.gz && sudo /usr/local/mysql/bin/mysql -u root -p < emp.sql
