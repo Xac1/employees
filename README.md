@@ -1,1 +1,1 @@
-employees database for import to MySQL server on MacOS
+employees database for import to MySQL server on MacOS and Ubuntu
