@@ -13,7 +13,9 @@ if [[ ! -a $file_extracted ]]
 then
     tar zxfv $file
 fi
-
+echo ----------------------------------------------------------------
+echo "Введіть пароль, який ви вказали при встановленні MySQL сервера"
+echo ----------------------------------------------------------------
 if /usr/local/mysql/bin/mysql -u root -p < $file_extracted
 then
     echo "All done!"

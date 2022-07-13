@@ -1,23 +1,25 @@
 
 #Ubuntu
 file=emp.tar.gz
-file_unzipped=emp.sql
+file_extracted=emp.sql
 
 if [[ ! -a $file ]]
 then
-    wget https://github.com/Xac1/employees/raw/main/$file
+    curl -LJO https://github.com/Xac1/employees/raw/main/$file
 fi
 
-if [[ ! -a $file_unzipped ]]
+if [[ ! -a $file_extracted ]]
 then
     tar zxfv $file
 fi
-
-if /usr/bin/mysql -u root -p < $file_unzipped
+echo ----------------------------------------------------------------
+echo "Введіть пароль, який ви вказали при встановленні MySQL сервера"
+echo ----------------------------------------------------------------
+if /usr/bin/mysql -u root -p < $file_extracted
 then
     echo "All done!"
 else
-    echo "Command failed, try gain! Wrong password to your MySQL Server?!"    
+    echo "Спробуйте ще раз. Ви пароль вірно ввели від MySQL сервера?!"
 exit 1
 fi
 
