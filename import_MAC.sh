@@ -15,10 +15,12 @@ then
 fi
 echo ----------------------------------------------------------------
 echo "Введіть пароль, який ви вказали при встановленні MySQL сервера"
+echo "й натисніть Enter"
+echo "Після вводу чекайте декілька хвилин, поки пройде імпорт бази"
 echo ----------------------------------------------------------------
 if /usr/local/mysql/bin/mysql -u root -p < $file_extracted
 then
-    echo "All done!"
+    echo "Все готово! Переходьте в MySQL Workbench й перевіряйте"
 else
     echo "Command failed, try gain! Wrong password to your MySQL Server?!"
 exit 1
